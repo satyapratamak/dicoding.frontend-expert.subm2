@@ -19,7 +19,7 @@
     <header>
         <a href="#" class="logo"><img src="./images//navbar/logo.svg" alt=""></a>
 
-        <nav class="navbar">
+        <nav class="navbar" id="navigationdrawer">
             <a href="#" class="active">home</a>
             <a href="#">favorite</a>
             <a href="https://www.linkedin.com/in/satya-pratama-b5bba672/">about us</a>
@@ -31,7 +31,9 @@
         </nav>
 
         <div class="icons">
-            <a href="#"><i class="fas fa-bars" id="menu"></i></a>
+            
+            <!-- <a href="#"><i class="fas fa-bars" id="menu"></i></a> -->
+            <button><i class="fas fa-bars" id="menu"></i></button>
             
             <a href="#"><i class="fas fa-search"></i></a>
             
@@ -627,24 +629,7 @@
             loop : true,
             
         });
-    </script>
-
-
-    <script type="text/javascript">
-
-        
-        let menu = document.querySelector('#menu');
-        let navbar = document.querySelector('.navbar');
-
-        menu.onclick = () =>{
-            menu.classList.toggle('fa-times');
-            navbar.classList.toggle('active');
-        }
-        
-        
-    </script>
-
-    
+    </script>    
     
     
 </body>    

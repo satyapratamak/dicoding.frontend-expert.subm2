@@ -88,6 +88,7 @@ header .navbar a:hover
     
 }
 
+
 header .icons i
 {
     cursor : pointer;
@@ -109,6 +110,11 @@ header .icons i:hover
     color : #fff;
     background: var(--light-color);
     transform: rotate(360deg);
+}
+
+header .icons button
+{
+    background: transparent;
 }
 
 header .icons #menu
@@ -404,139 +410,3 @@ section
     grid-template-columns: repeat(auto-fit, minmax(30.2rem, 1fr));
 }
 /* our chef style ends */
-
-/* media query */
-@media (max-width : 1200px)
-{
-    .home .home-slider .slide 
-    {
-        display: flex;
-        align-items: center;
-        height: 101vh;
-        width: 100%;
-        justify-content: flex-start;
-    }
-
-        /* .home .home-slider .slide {
-    
-            justify-content: center;
-            height: 90vh;
-        } */
-    
-        .home .home-slider .slide .content {
-    
-            padding: 0;
-        }
-    
-        .home .home-slider .slide .content h1 {
-    
-            font-size: 9rem;
-        }
-}
-
-
-@media (max-width : 991px)
-{
-    html
-    {
-        font-size : 59%;
-    }
-    header
-    {
-        padding : 1.1rem 2.1rem;
-    }
-    header .logo img
-    {
-        height : 6.9rem;
-    }
-
-    /* header .navbar a {
-        font-size: 2.8rem;
-        padding: .55rem 1.51rem;
-        color: var(--light-color);
-        border: .11rem solid transparent;
-        min-height: 44px !important;
-        min-width: 44px !important;
-    } */
-
-    .our-menu .menu-container
-    {
-        grid-template-columns: repeat(auto-fit, minmax(31rem, 2fr));
-    }
-
-    .our-menu .menu-container .item .item-menu span
-    {
-        width : 14%;
-        
-    }
-}
-
-@media (max-width : 768px)
-{
-    /* navbar media query */
-    header .logo img
-    {
-        height : 6.9rem;
-    }
-
-    header .icons #menu
-    {
-        display: inline-block;
-    }
-
-    header .navbar
-    {
-        position : absolute;
-        top : 100%;
-        left : 0;
-        right : 0;
-        background: #eee;
-        border-top : .15rem solid rgba(198, 168, 129, 0.2);
-        border-bottom: .15rem solid rgba(198, 168, 129, 0.2);
-        padding : 0.9rem;
-        clip-path : polygon(0 0,100% 0,100% 0,0 0);
-    }
-
-    header .navbar.active
-    {
-        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-    }
-
-    header .navbar a
-    {
-        display : block;
-        padding : 1.4rem;
-        margin : 1.1rem;
-        font-size: 1.9rem;
-        background: var(--black);
-        min-height: 44px !important;
-            min-width: 44px !important;
-    }
-
-    .home .home-slider .slide {
-        
-        justify-content: center;
-        height : 81vh;
-    }
-
-    .home .home-slider .slide .content{
-
-        padding : 0;
-    }
-
-    .home .home-slider .slide .content h1{
-
-        font-size: 7.1rem;
-    }
-
-    /* welcome section */
-    .welcome .box-container{
-        flex-wrap : wrap;
-    }
-
-    .welcome .box-container .box
-    {
-        width : 100%;
-
-    }
-}
