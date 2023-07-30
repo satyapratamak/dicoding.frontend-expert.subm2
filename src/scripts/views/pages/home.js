@@ -1,7 +1,7 @@
 /* eslint-disable max-len */
 import restaurantDicodingSource from '../../data/restaurant-dicoding-source';
 import {createTemplateHomeRestaurant} from '../templates/restaurant-template-creator';
-//import RestaurantsAPI from '../../globals/restaurant-api';
+// import RestaurantsAPI from '../../globals/restaurant-api';
 
 
 const Home = {
