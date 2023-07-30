@@ -1,4 +1,5 @@
 import DrawerInitiator from '../utils/drawer-initiator';
+import UrlParser from '../routes/url-parser';
 import routes from '../routes/routes';
 
 // eslint-disable-next-line require-jsdoc
@@ -28,7 +29,10 @@ class App {
   async renderPage() {
     const url = UrlParser.parseActiveUrlWithCombiner();
     const page = routes[url];
-    this._content.innerHTML = await page.render();
+    // this._content.innerHTML = await page.onMounted();
+    // this._content.innerHTML = ``;
+    this._content.innerHTML = await page.render(); // await page.render();
+
     await page.afterRender();
   }
 };

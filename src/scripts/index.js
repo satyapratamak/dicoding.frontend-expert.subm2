@@ -8,5 +8,9 @@ import App from './views/app';
 const app = new App({
   button: document.querySelector('#menu'),
   drawer: document.querySelector('#navigationdrawer'),
-  content: document.querySelector('#maincontent'),
+  content: document.querySelector('#mainContaintRestaurant'),
+});
+
+window.addEventListener('load', () => {
+  app.renderPage();
 });

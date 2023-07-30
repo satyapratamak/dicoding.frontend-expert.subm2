@@ -375,7 +375,7 @@ section
 
 }
 
-.our-menu .menu-container .item .item-menu span
+.our-menu .menu-container .item .item-menu .dots
 {
     width : 34%;
     display: inline-block;

@@ -7,14 +7,9 @@ const DrawerInitiator = {
       this._toogleDrawer(event, drawer);
     });
 
-    content.addEventListener('click', (event) =>{
-      this._closeDrawer(event, drawer);
-    });
-
-    // button.onclick = () =>{
-    //   button.classList.toggle('fa-times');
-    //   drawer.classList.toggle('active');
-    // };
+    // content.addEventListener('click', (event) =>{
+    //   this._closeDrawer(event, drawer);
+    // });
   },
 
   _toogleDrawer(event, drawer) {
