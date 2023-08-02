@@ -11,7 +11,7 @@ const createTemplateHomeRestaurant = (restaurant) => `
         <h3> ${restaurant.name}</h3>
         
         <p>${restaurant.description}</p>
-        <a href="/#/detail/${restaurant.id}" class="btn">Read More</a>
+        <a href="#/detail/${restaurant.id}" class="btn">Read More</a>
     </div>
 </div>
 `;

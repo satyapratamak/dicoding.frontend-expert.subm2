@@ -96,18 +96,15 @@
     }
 
     .home .home-slider .slide {
-
-        justify-content: center;
-        height: 81vh;
-    }
+        justify-content: center;        
+        width : auto;
+    }   
 
     .home .home-slider .slide .content {
-
         padding: 0;
     }
 
     .home .home-slider .slide .content h1 {
-
         font-size: 7.1rem;
     }
 
@@ -118,6 +115,5 @@
 
     .welcome .box-container .box {
         width: 100%;
-
     }
 }

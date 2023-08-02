@@ -27,13 +27,16 @@ class App {
 
   // eslint-disable-next-line require-jsdoc
   async renderPage() {
-    const url = UrlParser.parseActiveUrlWithCombiner();
+    const url = UrlParser.withCombiner();
     const page = routes[url];
-    // this._content.innerHTML = await page.onMounted();
-    // this._content.innerHTML = ``;
-    this._content.innerHTML = await page.render(); // await page.render();
+    this._content.innerHTML = await page.onMounted();
+    await page.onAfterMounted();
 
-    await page.afterRender();
+    const skipElem = document.querySelector('.skip-link');
+    skipElem.addEventListener('click', (event) => {
+      event.preventDefault();
+      document.querySelector('#maincontent').focus();
+    });
   }
 };
 

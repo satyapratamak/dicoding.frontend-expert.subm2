@@ -70,8 +70,7 @@ header .navbar a
     padding : .55rem 1.51rem;
     color : var(--light-color);
     border : .11rem solid transparent;
-    /* height: 44px !important;
-    width: 44px !important; */
+
 }
 
 header .navbar a:focus
@@ -93,8 +92,7 @@ header .icons i
 {
     cursor : pointer;
     margin-left : .55rem;
-    /* height: 4.45rem;
-    width : 4.45rem; */
+   
     min-width : 44px;
     min-height : 44px;
     

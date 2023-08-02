@@ -1,28 +1,36 @@
-/* eslint-disable max-len */
-import restaurantDicodingSource from '../../data/restaurant-dicoding-source';
-import {createTemplateHomeRestaurant} from '../templates/restaurant-template-creator';
-// import RestaurantsAPI from '../../globals/restaurant-api';
+import Restaurants from '../../globals/restaurant-api';
+import Base from '../../globals/base-data';
+import itemList from '../components/templates/item-list-template';
+import '../components/main-element';
 
 
 const Home = {
-  async render() {
-    return `<section class="welcome" id="about">
+  async onMounted() {
+    return `
+    <section class="welcome" id="about">
         <h1 class="heading">WELCOME TO GRILLI</h1>
         <div style="text-align:center">
             <h3 class="sub-heading">~ All Luxury and Quality Restaurant ~</h3>
         </div>
-        
-        <div class="box-container" id="restaurant">                
-        </div>
-    </section>`;
+               
+    </section>
+    <main-element main-title=""></main-element>`;
   },
 
-  async afterRender() {
-    const homeRestaurants = await restaurantDicodingSource.homeRestaurant();
-    const restaurantContainer = document.querySelector('#restaurant');
-
-    homeRestaurants.forEach((restaurant) => {
-      restaurantContainer.innerHTML += createTemplateHomeRestaurant(restaurant);
+  async onAfterMounted() {
+    const restos = document.querySelector('.restoList');
+    const {restaurants} = await Restaurants.getAll();
+    restaurants.forEach((resto) => {
+      const imgPath = `${Base.API_URL}${Base.IMG_PATH}${resto.pictureId}`;
+      const substringDescription = `${resto.description.substring(0, 250)}...`;
+      const restoEl = document.createElement('article');
+      restoEl.setAttribute('class', 'resto');
+      restoEl.innerHTML = itemList({
+        data: resto,
+        imagePath: imgPath,
+        description: substringDescription,
+      });
+      restos.append(restoEl);
     });
   },
 };
