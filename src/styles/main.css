@@ -47,7 +47,8 @@
 .restoImgCity {
   position: relative;
   background-size: cover;
-    background-repeat: no-repeat;
+  background-repeat: no-repeat;
+  width : 100%;
 }
 
 .restoCity {
@@ -260,6 +261,10 @@ footer {
   min-width : 44px;
 }
 
+.detailImg {
+  width: 100%;
+}
+
 
 #addReview textarea,
 #addReview input {
@@ -350,4 +355,12 @@ footer {
   .menus {
     width: 40%;
   }
+}
+
+@media screen and (min-width: 450px) {
+
+  .detailImg{
+    width : 100%;
+  }
+  
 }

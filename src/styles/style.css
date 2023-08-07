@@ -42,6 +42,10 @@ html
     top: 0;
 }
 
+#maincontent:focus{
+    
+}
+
 /* navbar style start */
 header
 {

@@ -95,6 +95,10 @@
         min-width: 44px !important;
     }
 
+    .home {
+        width : 100%;
+    }
+
     .home .home-slider .slide {
         justify-content: center;        
         width : auto;
@@ -114,6 +118,18 @@
     }
 
     .welcome .box-container .box {
+        width: 100%;
+    }
+}
+
+@media (max-width : 530px) {
+    .home {
+        width : 100%;
+    }
+}
+
+@media (max-width : 350px) {
+    .home {
         width: 100%;
     }
 }
